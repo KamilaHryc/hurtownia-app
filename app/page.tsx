@@ -141,7 +141,7 @@ export default function HomePage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Wpisz hasło"
-                  required
+                  required 
                 />
               </div>
 
