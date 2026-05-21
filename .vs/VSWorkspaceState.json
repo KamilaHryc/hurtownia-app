@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\dashboard",
+    "\\app\\dashboard\\admin\\profil",
+    "\\app\\dashboard\\admin\\straty",
+    "\\app\\dashboard\\admin\\straty\\[id]",
+    "\\app\\dashboard\\pracownik",
+    "\\app\\dashboard\\pracownik\\reklamacje",
+    "\\app\\dashboard\\pracownik\\reklamacje\\[id]",
+    "\\app\\dashboard\\pracownik\\straty",
+    "\\app\\dashboard\\pracownik\\straty\\[id]"
+  ],
+  "SelectedNode": "\\app\\dashboard\\pracownik\\straty\\[id]\\page.tsx",
+  "PreviewInSolutionExplorer": false
+}
