@@ -12,7 +12,7 @@ export default function HomePage() {
     setError("");
 
     try {
-      const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/login.php", {
+      const res = await fetch("/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
