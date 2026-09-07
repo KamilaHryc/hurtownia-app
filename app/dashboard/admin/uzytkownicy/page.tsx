@@ -22,7 +22,7 @@ export default function AdminUsersPage() {
     const [newPassword, setNewPassword] = useState("");
 
     async function handleLogout() {
-        await fetch("http://localhost/hurtownia-api/logout.php", {
+        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
             credentials: "include",
         });
         window.location.href = "/";
@@ -30,7 +30,7 @@ export default function AdminUsersPage() {
 
     async function loadUsers() {
         try {
-            const res = await fetch("http://localhost/hurtownia-api/admin_users.php", {
+            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_users.php", {
                 credentials: "include",
             });
 
@@ -53,7 +53,7 @@ export default function AdminUsersPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("http://localhost/hurtownia-api/admin_user_delete.php", {
+        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_user_delete.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -78,7 +78,7 @@ export default function AdminUsersPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("http://localhost/hurtownia-api/admin_user_update.php", {
+        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_user_update.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -105,7 +105,7 @@ export default function AdminUsersPage() {
         setError("");
 
         const res = await fetch(
-            "http://localhost/hurtownia-api/admin_user_reset_password.php",
+            "https://hurtownia-warzywa.42web.io/hurtownia-api/admin_user_reset_password.php",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
