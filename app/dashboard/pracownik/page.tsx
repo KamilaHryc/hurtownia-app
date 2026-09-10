@@ -35,7 +35,7 @@ export default function DashboardPracownikPage() {
     async function loadDashboard() {
         try {
             const res = await fetch(
-                "https://hurtownia-warzywa.42web.io/hurtownia-api/employee_dashboard.php",
+                "https://hurtownia-api-production.up.railway.app/employee_dashboard.php",
                 {
                     method: "GET",
                     credentials: "include",
