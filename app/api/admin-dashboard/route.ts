@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const cookie = request.headers.get("cookie") || "";
+
     const response = await fetch(
       "https://hurtownia-api-production.up.railway.app/admin_dashboard.php",
       {
         method: "GET",
         headers: {
-          Cookie: "",
+          Cookie: cookie,
         },
       }
     );
