@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const body = await request.text();
 
     const response = await fetch(
-      "https://hurtownia-warzywa.42web.io/hurtownia-api/login.php",
+     "https://hurtownia-api-production.up.railway.app/login.php",
       {
         method: "POST",
         headers: {
