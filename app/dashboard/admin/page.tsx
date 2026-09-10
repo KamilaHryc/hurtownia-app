@@ -36,7 +36,7 @@ export default function DashboardAdminPage() {
 
     async function loadDashboard() {
         try {
-            const res = await fetch("https://hurtownia-api-production.up.railway.app/admin_dashboard.php", {
+            const res = await fetch("/api/admin-dashboard", {
                 method: "GET",
                 credentials: "include",
             });

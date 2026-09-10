@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const body = await request.text();
 
     const response = await fetch(
-     "https://hurtownia-api-production.up.railway.app/login.php",
+      "https://hurtownia-api-production.up.railway.app/login.php",
       {
         method: "POST",
         headers: {
@@ -17,12 +17,20 @@ export async function POST(request: Request) {
 
     const text = await response.text();
 
-    return new NextResponse(text, {
+    const nextResponse = new NextResponse(text, {
       status: response.status,
       headers: {
         "Content-Type": "application/json",
       },
     });
+
+    const setCookie = response.headers.get("set-cookie");
+
+    if (setCookie) {
+      nextResponse.headers.set("set-cookie", setCookie);
+    }
+
+    return nextResponse;
   } catch (error) {
     console.error("Błąd proxy logowania:", error);
 
