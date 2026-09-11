@@ -101,7 +101,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-sm text-green-50/90">
-            © 2025 Hurtownia Warzywno-Owocowa
+            © 2026 Hurtownia Warzywno-Owocowa
           </div>
         </section>
 
