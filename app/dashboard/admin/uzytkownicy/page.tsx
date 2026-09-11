@@ -30,7 +30,7 @@ export default function AdminUsersPage() {
 
     async function loadUsers() {
         try {
-            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_users.php", {
+            const res = await fetch("/api/php/admin_users.php", {
                 credentials: "include",
             });
 
