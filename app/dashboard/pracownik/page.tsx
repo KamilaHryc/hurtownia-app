@@ -35,7 +35,7 @@ export default function DashboardPracownikPage() {
     async function loadDashboard() {
         try {
             const res = await fetch(
-                "",
+                "/api/php/employee_dashboard.php",
                 {
                     method: "GET",
                     credentials: "include",
