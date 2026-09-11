@@ -13,7 +13,7 @@ export default function AddLossPage() {
     const [message, setMessage] = useState("");
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             method: "GET",
             credentials: "include",
         });
@@ -21,7 +21,7 @@ export default function AddLossPage() {
     }
 
     async function loadProducts() {
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/products_list.php", {
+        const res = await fetch("/api/php/products_list.php", {
             credentials: "include",
         });
 
@@ -33,7 +33,7 @@ export default function AddLossPage() {
         e.preventDefault();
         setMessage("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/loss_add.php", {
+        const res = await fetch("/api/php/loss_add.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

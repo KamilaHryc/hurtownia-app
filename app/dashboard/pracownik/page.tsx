@@ -60,7 +60,7 @@ export default function DashboardPracownikPage() {
     }
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             method: "GET",
             credentials: "include",
         });

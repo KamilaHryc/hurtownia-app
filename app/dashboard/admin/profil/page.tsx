@@ -29,7 +29,7 @@ export default function AdminProfilePage() {
     const [passwordError, setPasswordError] = useState("");
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             method: "GET",
             credentials: "include",
         });
@@ -39,7 +39,7 @@ export default function AdminProfilePage() {
 
     async function loadProfile() {
         try {
-            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/profile_get.php", {
+            const res = await fetch("/api/php/profile_get.php", {
                 credentials: "include",
             });
 
@@ -70,7 +70,7 @@ export default function AdminProfilePage() {
         setProfileError("");
 
         try {
-            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/profile_update.php", {
+            const res = await fetch("/api/php/profile_update.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -103,7 +103,7 @@ export default function AdminProfilePage() {
         setPasswordError("");
 
         try {
-            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/profile_password.php", {
+            const res = await fetch("/api/php/profile_password.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

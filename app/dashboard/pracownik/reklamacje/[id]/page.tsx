@@ -31,7 +31,7 @@ export default function EmployeeComplaintDetailsPage() {
     const [error, setError] = useState("");
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             credentials: "include",
         });
         window.location.href = "/";
@@ -40,7 +40,7 @@ export default function EmployeeComplaintDetailsPage() {
     async function loadDetails() {
         try {
             const res = await fetch(
-                `https://hurtownia-warzywa.42web.io/hurtownia-api/employee_complaint_details.php?id=${id}`,
+                `/api/php/employee_complaint_details.php?id=${id}`,
                 { credentials: "include" }
             );
 
@@ -63,7 +63,7 @@ export default function EmployeeComplaintDetailsPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/employee_complaint_status.php", {
+        const res = await fetch("/api/php/employee_complaint_status.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

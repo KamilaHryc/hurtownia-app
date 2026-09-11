@@ -11,7 +11,7 @@ export default function AdminAddProductPage() {
     const [error, setError] = useState("");
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             credentials: "include",
         });
         window.location.href = "/";
@@ -22,7 +22,7 @@ export default function AdminAddProductPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/product_add.php", {
+        const res = await fetch("/api/php/product_add.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

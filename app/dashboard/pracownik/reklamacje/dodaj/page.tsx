@@ -16,7 +16,7 @@ export default function AddComplaintPage() {
     const [message, setMessage] = useState("");
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             method: "GET",
             credentials: "include",
         });
@@ -24,10 +24,10 @@ export default function AddComplaintPage() {
     }
 
     async function loadData() {
-        const productsRes = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/products_list.php", {
+        const productsRes = await fetch("/api/php/products_list.php", {
             credentials: "include",
         });
-        const customersRes = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/customers_list.php", {
+        const customersRes = await fetch("/api/php/customers_list.php", {
             credentials: "include",
         });
 
@@ -42,7 +42,7 @@ export default function AddComplaintPage() {
         e.preventDefault();
         setMessage("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/complaint_add.php", {
+        const res = await fetch("/api/php/complaint_add.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

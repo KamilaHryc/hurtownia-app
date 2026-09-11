@@ -19,7 +19,7 @@ export default function AdminCustomersPage() {
     const [editing, setEditing] = useState<Customer | null>(null);
 
     async function handleLogout() {
-        await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/logout.php", {
+        await fetch("/api/php/logout.php", {
             credentials: "include",
         });
         window.location.href = "/";
@@ -27,7 +27,7 @@ export default function AdminCustomersPage() {
 
     async function loadCustomers() {
         try {
-            const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_customers.php", {
+            const res = await fetch("/api/php/admin_customers.php", {
                 credentials: "include",
             });
 
@@ -50,7 +50,7 @@ export default function AdminCustomersPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_customer_delete.php", {
+        const res = await fetch("/api/php/admin_customer_delete.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
@@ -75,7 +75,7 @@ export default function AdminCustomersPage() {
         setMessage("");
         setError("");
 
-        const res = await fetch("https://hurtownia-warzywa.42web.io/hurtownia-api/admin_customer_update.php", {
+        const res = await fetch("/api/php/admin_customer_update.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",
